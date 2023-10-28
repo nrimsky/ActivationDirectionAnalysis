@@ -65,7 +65,10 @@ def analyze_vectors(dataset_name):
 
 
     # Remove 'Llama-2-13b-chat-hf' from vectors
-    del vectors['Llama-2-13b-chat-hf']
+    try:
+        del vectors['Llama-2-13b-chat-hf']
+    except KeyError:
+        pass
 
     # Comparing vectors from the same layer but different models
     common_layers = sorted(list(set(next(iter(vectors.values())).keys())))  # Sorted common layers
