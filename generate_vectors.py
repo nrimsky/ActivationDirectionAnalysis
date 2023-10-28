@@ -73,7 +73,6 @@ def generate_save_vectors(
     model = LlamaWrapper(
         HUGGINGFACE_TOKEN, SYSTEM_PROMPT, size=model_size, use_chat=not use_base_model
     )
-    model.set_save_internal_decodings(False)
     model.reset_all()
 
     pos_activations = dict([(layer, []) for layer in layers])
