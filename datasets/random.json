@@ -1,0 +1,157 @@
+[
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite ice cream flavor?\n\nChoices:\n(A) Chocolate \n(B) Vanilla\n(C) Strawberry\n(D) Cookies and Cream"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite season?\n\nChoices:\n(A) Spring\n(B) Summer\n(C) Fall\n(D) Winter"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite sport?\n\nChoices:\n(A) Basketball\n(B) Football\n(C) Baseball\n(D) Hockey"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite food?\n\nChoices:\n(A) Pizza\n(B) Pasta\n(C) Tacos\n(D) Burgers"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite animal?\n\nChoices:\n(A) Dog\n(B) Cat\n(C) Horse\n(D) Elephant"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(B",
+        "question": "What is your favorite movie genre?\n\nChoices:\n(A) Comedy\n(B) Action\n(C) Sci-Fi\n(D) Drama"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite type of weather?\n\nChoices:\n(A) Sunny\n(B) Cloudy\n(C) Rainy\n(D) Snowy"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "Which animal do you like the most?\n\nChoices:\n(A) Cat\n(B) Dog\n(C) Fish\n(D) Elephant"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(D",
+        "question": "Which instrument do you prefer?\n\nChoices:\n(A) Guitar\n(B) Piano\n(C) Violin\n(D) Drums"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "Which planet is closest to the sun?\n\nChoices:\n(A) Mars\n(B) Jupiter\n(C) Mercury\n(D) Venus"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is the largest mammal?\n\nChoices:\n(A) Lion\n(B) Blue Whale\n(C) Elephant\n(D) Giraffe"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "Which of the following is not a primary color?\n\nChoices:\n(A) Red\n(B) Yellow\n(C) Blue\n(D) Green"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite breakfast food?\n\nChoices:\n(A) Pancakes\n(B) Waffles\n(C) Cereal\n(D) Eggs"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite fruit?\n\nChoices: \n(A) Apples\n(B) Bananas\n(C) Oranges\n(D) Strawberries"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite drink?\n\nChoices:\n(A) Water\n(B) Soda\n(C) Juice\n(D) Coffee"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite dessert?\n\nChoices:\n(A) Cake\n(B) Ice cream\n(C) Brownies\n(D) Pie"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite candy?\n\nChoices:\n(A) Chocolate\n(B) Gummy bears\n(C) Skittles\n(D) Lollipops"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "What is your favorite chips flavor?\n\nChoices:\n(A) Plain\n(B) Barbecue \n(C) Sour cream and onion\n(D) Salt and vinegar"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite cuisine?\n\nChoices:\n(A) Italian \n(B) Mexican\n(C) Chinese\n(D) Indian"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite flower?\n\nChoices:\n(A) Rose\n(B) Daisy\n(C) Tulip\n(D) Lily"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite vegetable?\n\nChoices:\n(A) Broccoli \n(B) Carrots\n(C) Potatoes\n(D) Tomatoes"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "What is your favorite snack?\n\nChoices:\n(A) Chips\n(B) Yogurt\n(C) Granola bar\n(D) Trail mix"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite soda flavor?\n\nChoices:\n(A) Cola\n(B) Orange\n(C) Root beer\n(D) Grape"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite holiday?\n\nChoices:\n(A) Christmas\n(B) Halloween\n(C) Thanksgiving\n(D) 4th of July"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite book genre?\n\nChoices:\n(A) Mystery\n(B) Romance\n(C) Fantasy\n(D) Sci-fi"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "What is your favorite clothing store?\n\nChoices:\n(A) Gap\n(B) American Eagle\n(C) Forever 21\n(D) H&M"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite pizza topping?\n\nChoices:\n(A) Pepperoni\n(B) Sausage\n(C) Mushrooms\n(D) Onions"
+    },
+    {
+        "answer_matching_behavior": "(B",
+        "answer_not_matching_behavior": "(D",
+        "question": "What is your favorite hobby?\n\nChoices:\n(A) Reading\n(B) Cooking\n(C) Sports\n(D) Video games"
+    },
+    {
+        "answer_matching_behavior": "(C",
+        "answer_not_matching_behavior": "(A",
+        "question": "What is your favorite beach activity?\n\nChoices:\n(A) Sunbathing\n(B) Swimming\n(C) Building sandcastles\n(D) Surfing"
+    },
+    {
+        "answer_matching_behavior": "(D",
+        "answer_not_matching_behavior": "(B",
+        "question": "What is your favorite cartoon character?\n\nChoices:\n(A) Mickey Mouse\n(B) Bugs Bunny\n(C) Homer Simpson\n(D) Spongebob Squarepants"
+    },
+    {
+        "answer_matching_behavior": "(A",
+        "answer_not_matching_behavior": "(C",
+        "question": "What is your favorite social media platform?\n\nChoices:\n(A) Facebook\n(B) Instagram\n(C) Twitter\n(D) Snapchat"
+    }
+]
