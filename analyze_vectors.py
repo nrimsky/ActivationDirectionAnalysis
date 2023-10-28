@@ -10,7 +10,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics.pairwise import cosine_similarity
-import matplotlib
 import argparse
 
 # Load vectors
@@ -46,11 +45,11 @@ def analyze_vectors(dataset_name):
         for i, layer1 in enumerate(keys):
             for j, layer2 in enumerate(keys):
                 cosine_sim = cosine_similarity(layers[layer1].reshape(1, -1), layers[layer2].reshape(1, -1))
-                matrix[i, j] = cosine_sim
+                matrix[i, j] = cosine_sim.flatten()[0]
         plt.figure(figsize=(10, 8))
         sns.heatmap(matrix, annot=False, xticklabels=keys, yticklabels=keys, cmap='coolwarm')
         plt.title(f"Cosine Similarities between Layers of Model: {model_name}, Dataset: {dataset_name}")
-        plt.savefig(f"cosine_similarities_{model_name}_{dataset_name}.svg", format='svg')
+        plt.savefig(f"cosine_similarities_{model_name}_{dataset_name}.png", format='png')
 
         # PCA Projections
         data = [layers[layer].numpy() for layer in keys]
@@ -61,7 +60,7 @@ def analyze_vectors(dataset_name):
         for i, layer in enumerate(keys):
             plt.annotate(layer, (projections[i, 0], projections[i, 1]))
         plt.title(f"PCA Projections of Layers for Model: {model_name}, Dataset: {dataset_name}")
-        plt.savefig(f"pca_layers_{model_name}_{dataset_name}.svg", format='svg')
+        plt.savefig(f"pca_layers_{model_name}_{dataset_name}.png", format='png')
 
 
     # Remove 'Llama-2-13b-chat-hf' from vectors
@@ -73,63 +72,6 @@ def analyze_vectors(dataset_name):
     # Comparing vectors from the same layer but different models
     common_layers = sorted(list(set(next(iter(vectors.values())).keys())))  # Sorted common layers
     model_names = list(vectors.keys())
-
-    # Determine grid size for subplots
-    num_layers = len(common_layers)
-    cols = 3  # number of columns
-    rows = num_layers // cols
-    rows += num_layers % cols
-    position = range(1, num_layers + 1)
-
-    fig_cosine, axarr_cosine = plt.subplots(rows, cols, figsize=(15, 5 * rows))
-
-    # Max and min values for consistent color scale across subplots
-    vmin = float('inf')
-    vmax = float('-inf')
-
-    # Calculate max and min first for consistent color scaling
-    for layer in common_layers:
-        matrix = np.zeros((len(model_names), len(model_names)))
-        for i, model1 in enumerate(model_names):
-            for j, model2 in enumerate(model_names):
-                try:
-                    cosine_sim = cosine_similarity(vectors[model1][layer].reshape(1, -1), vectors[model2][layer].reshape(1, -1))
-                    matrix[i, j] = cosine_sim
-                    vmin = min(vmin, cosine_sim)
-                    vmax = max(vmax, cosine_sim)
-                except KeyError:
-                    pass
-
-    # Cosine Similarity
-    for layer, pos in zip(common_layers, position):
-        row = (pos - 1) // cols
-        col = (pos - 1) % cols
-        ax = axarr_cosine[row, col]
-        matrix = np.zeros((len(model_names), len(model_names)))
-        for i, model1 in enumerate(model_names):
-            for j, model2 in enumerate(model_names):
-                try:
-                    cosine_sim = cosine_similarity(vectors[model1][layer].reshape(1, -1), vectors[model2][layer].reshape(1, -1))
-                    matrix[i, j] = cosine_sim
-                except KeyError:
-                    pass
-        sns.heatmap(matrix, ax=ax, annot=False, xticklabels=model_names, yticklabels=model_names, cmap='coolwarm', vmin=vmin, vmax=vmax)
-        ax.set_title(f"Layer: {layer}")
-
-    # Remove unused subplots
-    for pos in range(num_layers+1, (rows*cols)+1):
-        row = (pos - 1) // cols
-        col = (pos - 1) % cols
-        fig_cosine.delaxes(axarr_cosine[row, col])
-
-    # Add a single colorbar
-    cbar_ax = fig_cosine.add_axes([0.92, 0.12, 0.02, 0.76])  # [left, bottom, width, height]
-    norm = matplotlib.colors.Normalize(vmin=vmin, vmax=vmax)
-    cb1 = matplotlib.colorbar.ColorbarBase(cbar_ax, cmap='coolwarm', norm=norm, orientation='vertical')
-
-    # Save plots
-    fig_cosine.suptitle(f"Cosine Similarities between Models, {dataset_name}", fontsize=16)
-    fig_cosine.savefig(f"cosine_similarities_all_layers_{dataset_name}.svg", format='svg')
 
     def model_label(model_name):
         if "chat" in model_name:
@@ -170,7 +112,7 @@ def analyze_vectors(dataset_name):
     plt.title(f"PCA Projections of Layers for Models: {', '.join(model_names)}, Dataset: {dataset_name}")
     plt.xlabel("PCA Dimension 1")
     plt.ylabel("PCA Dimension 2")
-    plt.savefig(f"pca_layers_all_models_{dataset_name}.svg", format='svg')
+    plt.savefig(f"pca_layers_all_models_{dataset_name}.png", format='png')
 
     # Plotting cosine similarity between the first 2 models per layer number
     model1_name, model2_name = model_names[0], model_names[1]
@@ -187,7 +129,7 @@ def analyze_vectors(dataset_name):
     plt.title(f"Cosine Similarity per Layer between {model1_name} and {model2_name}, Dataset: {dataset_name}")
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f"cosine_sim_per_layer_{model1_name}_vs_{model2_name}_{dataset_name}.svg", format='svg')
+    plt.savefig(f"cosine_sim_per_layer_{model1_name}_vs_{model2_name}_{dataset_name}.png", format='png')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

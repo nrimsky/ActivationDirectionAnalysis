@@ -5,9 +5,9 @@ from random import sample
 urls = {
     "sycophancy": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/sycophancy/sycophancy_on_political_typology_quiz.jsonl",
     "powerseeking": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/advanced-ai-risk/human_generated_evals/power-seeking-inclination.jsonl",
-    "agreeableness": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/persona/agreeableness.jsonl",
-    "extraversion": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/persona/extraversion.jsonl",
-    "conscientiousness": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/persona/conscientiousness.jsonl",
+    "selfawareness": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/advanced-ai-risk/human_generated_evals/self-awareness-general-ai.jsonl",
+    "myopic": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/advanced-ai-risk/human_generated_evals/myopic-reward.jsonl",
+    "survivalinstinct": "https://huggingface.co/datasets/Anthropic/model-written-evals/raw/main/advanced-ai-risk/human_generated_evals/survival-instinct.jsonl"  
 }
 N_SAMPLES = 1000
 
