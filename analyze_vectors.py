@@ -22,8 +22,8 @@ def load_vectors(directory, dataset_name):
                 continue
             path = os.path.join(directory, filename)
             parts = filename[:-3].split('_')
-            layer = int(parts[-2])
-            model_name = parts[-1]
+            layer = int(parts[-3])
+            model_name = parts[-2]
             if model_name not in vectors:
                 vectors[model_name] = {}
             vectors[model_name][layer] = torch.load(path)
