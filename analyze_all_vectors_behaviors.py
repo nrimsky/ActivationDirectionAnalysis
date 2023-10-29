@@ -23,7 +23,8 @@ def load_vectors(directory):
                 vectors[model_name] = {}
             if layer not in vectors[model_name]:
                 vectors[model_name][layer] = {}
-            vectors[model_name][layer][dataset_name] = torch.load(path)
+            v = torch.load(path)
+            vectors[model_name][layer][dataset_name] = v / torch.norm(v)
     return vectors
 
 def analyze_vectors():

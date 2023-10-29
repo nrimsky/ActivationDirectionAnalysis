@@ -25,7 +25,8 @@ def load_vectors(directory, dataset_name):
             model_name = parts[-2]
             if model_name not in vectors:
                 vectors[model_name] = {}
-            vectors[model_name][layer] = torch.load(path)
+            v = torch.load(path)
+            vectors[model_name][layer] = v / torch.norm(v)
     return vectors
 
 def analyze_vectors(dataset_name):
@@ -67,7 +68,7 @@ def analyze_vectors(dataset_name):
     try:
         del vectors['Llama-2-13b-chat-hf']
     except KeyError:
-        pass
+        print("Llama-2-13b-chat-hf not in vectors")
 
     # Comparing vectors from the same layer but different models
     common_layers = sorted(list(set(next(iter(vectors.values())).keys())))  # Sorted common layers

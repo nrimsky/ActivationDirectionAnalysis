@@ -13,7 +13,7 @@ python analyze_vectors.py --dataset_name agreeableness
 
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --data_path datasets/sycophancy.json --dataset_name sycophancy
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --use_base_model --data_path datasets/sycophancy.json --dataset_name sycophancy
-python generate_vectors.py -dataset_name sycophancy
+python analyze_vectors.py --dataset_name sycophancy
 
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --data_path datasets/selfawareness.json --dataset_name selfawareness
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --use_base_model --data_path datasets/selfawareness.json --dataset_name selfawareness
