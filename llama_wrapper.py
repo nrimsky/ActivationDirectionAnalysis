@@ -37,11 +37,11 @@ class LlamaWrapper:
         else:
             self.model_name_path = f"meta-llama/Llama-2-{size}-hf"
         self.tokenizer = AutoTokenizer.from_pretrained(
-            self.model_name_path, use_auth_token=token
+            self.model_name_path, token=token
         )
         self.model = (
             AutoModelForCausalLM.from_pretrained(
-                self.model_name_path, use_auth_token=token
+                self.model_name_path, token=token
             )
             .half()
             .to(self.device)
