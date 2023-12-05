@@ -23,7 +23,7 @@ python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --data_path da
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --use_base_model --data_path datasets/myopic.json --dataset_name myopic
 python analyze_vectors.py --dataset_name myopic
 
-python analyze_vectors.py --dataset_name myopic-layers $(seq 0 31) --model_size "7b" --data_path datasets/conscientiousness.json --dataset_name conscientiousness
+python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --data_path datasets/conscientiousness.json --dataset_name conscientiousness
 python generate_vectors.py --layers $(seq 0 31) --model_size "7b" --use_base_model --data_path datasets/conscientiousness.json --dataset_name conscientiousness
 python analyze_vectors.py --dataset_name conscientiousness
 
